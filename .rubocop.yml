@@ -1,0 +1,9 @@
+require:
+  - rubocop-rspec
+
+Metrics/LineLength:
+  IgnoredPatterns:
+    - '^\s*#'
+
+Style/Documentation:
+  Enabled: false
