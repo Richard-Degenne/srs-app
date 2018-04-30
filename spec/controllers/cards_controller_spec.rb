@@ -7,6 +7,15 @@ describe CardsController, type: :controller do
 
   let!(:card) { create(:card) }
 
+  describe 'GET #new' do
+    subject(:get_new) { get :new, params: {}, session: valid_session }
+
+    it 'returns a success response' do
+      get_new
+      expect(response).to be_successful
+    end
+  end
+
   describe 'POST #create' do
     subject(:post_create) do
       post :create, params: { card: attributes }, session: valid_session

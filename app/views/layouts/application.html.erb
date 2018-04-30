@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SrsApp</title>
+    <title>SRS App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
+    <% flash.each do |type, contents| %>
+      <%= content_tag :div, contents, class: "alert alert-#{type}" %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
