@@ -5,5 +5,11 @@ Metrics/LineLength:
   IgnoredPatterns:
     - '^\s*#'
 
+Layout/CommentIndentation:
+  Enabled: false
+Style/MixinUsage:
+  Enabled: false
+Style/NumericLiterals:
+  Enabled: false
 Style/Documentation:
   Enabled: false
