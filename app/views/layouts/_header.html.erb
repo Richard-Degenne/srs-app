@@ -1,12 +1,12 @@
-<header class="navbar navbar-fixed-top">
-  <div class="container">
-    <div id="logo">
-      <span id="logo-title">SRS App</span>
-    </div>
-    <nav>
-      <ul class="nav navbar-nav">
-        <li><%= link_to 'Cards', cards_path %></li>
+<header>
+  <nav class="navbar navbar-default navbar-expand-lg navbar-light bg-light" role="navigation">
+    <a class="navbar-brand" href="/">SRS App</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to 'Cards', cards_path, class: 'nav-link' %>
+        </li>
       </ul>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </header>
