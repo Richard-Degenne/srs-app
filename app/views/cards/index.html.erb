@@ -1,0 +1,13 @@
+<h1>Cards</h1>
+
+<%= link_to 'New Card', new_card_path %>
+
+<div class="cards-index">
+  <ul>
+    <% @cards.each do |card| %>
+      <li>
+        <%= render 'card', card: card %>
+      </li>
+    <% end %>
+  </ul>
+</div>
