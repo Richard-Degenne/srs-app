@@ -3,6 +3,12 @@
 class CardsController < ApplicationController
   before_action :set_card, only: %i[show edit update destroy]
 
+  # GET /cards
+  # GET /cards.json
+  def index
+    @cards = Card.all
+  end
+
   # GET /cards/new
   def new
     @card = Card.new

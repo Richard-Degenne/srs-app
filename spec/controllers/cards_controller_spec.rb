@@ -7,6 +7,15 @@ describe CardsController, type: :controller do
 
   let!(:card) { create(:card) }
 
+  describe 'GET #index' do
+    subject(:get_index) { get :index, params: {}, session: valid_session }
+
+    it 'returns a success response' do
+      get_index
+      expect(response).to be_successful
+    end
+  end
+
   describe 'GET #new' do
     subject(:get_new) { get :new, params: {}, session: valid_session }
 
