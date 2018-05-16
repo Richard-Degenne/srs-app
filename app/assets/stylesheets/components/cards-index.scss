@@ -1,0 +1,16 @@
+.cards-index {
+  ul {
+    column-count: 3;
+    column-gap: 30px;
+    list-style: none;
+  }
+
+  .card {
+    padding: 5px;
+
+    .btn-group {
+      margin-left: -5px;
+      margin-bottom: -5px;
+    }
+  }
+}

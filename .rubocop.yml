@@ -1,9 +1,26 @@
 require:
   - rubocop-rspec
 
+MethodLength:
+  Max: 20
+
+RSpec/ExampleLength:
+  Max: 10
+
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context']
+
 Metrics/LineLength:
   IgnoredPatterns:
     - '^\s*#'
 
+Layout/CommentIndentation:
+  Enabled: false
+Layout/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+Style/MixinUsage:
+  Enabled: false
+Style/NumericLiterals:
+  Enabled: false
 Style/Documentation:
   Enabled: false

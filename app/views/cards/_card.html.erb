@@ -1,0 +1,14 @@
+  <div class="card">
+    <p class="card-title">
+    <%= card.question %>
+    </p>
+    <div class="card-separator"></div>
+    <p class="card-text">
+    <%= card.answer %>
+    </p>
+    <div class="btn-group" role="actions">
+      <%= link_to 'Show', card_path(card), class: 'btn btn-secondary' %>
+      <%= link_to 'Edit', edit_card_path(card), class: 'btn btn-secondary' %>
+      <%= link_to 'Delete', card_path(card), method: :delete, class: 'btn btn-secondary' %>
+    </div>
+  </div>
