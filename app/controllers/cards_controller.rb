@@ -22,7 +22,7 @@ class CardsController < ApplicationController
     respond_to do |format|
       if @card.save
         format.html do
-          redirect_to @card, notice: 'Card was successfully created.'
+          redirect_to cards_path, notice: 'Card was successfully created.'
         end
         format.json { render :show, status: :created, location: @card }
       else

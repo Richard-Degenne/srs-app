@@ -39,9 +39,9 @@ describe CardsController, type: :controller do
         expect { post_create }.to change(Card, :count).by(1)
       end
 
-      it 'redirects to the created card' do
+      it 'redirects to the list of cards' do
         post_create
-        expect(response).to redirect_to(Card.last)
+        expect(response).to redirect_to(cards_path)
       end
     end
 
