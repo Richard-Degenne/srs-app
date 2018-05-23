@@ -64,6 +64,7 @@ group :test do
   gem 'ffaker'
   gem 'rails-controller-testing'
   gem 'rspec-its'
+  gem 'simplecov'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'

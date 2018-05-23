@@ -31,3 +31,4 @@
 
 #Cutsom ignores
 .env
+/coverage
