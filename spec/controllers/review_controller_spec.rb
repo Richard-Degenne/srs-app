@@ -5,24 +5,28 @@ require 'rails_helper'
 describe ReviewController, type: :controller do
   let(:valid_session) { {} }
 
-  describe 'GET #review' do
-    subject(:get_review) { get :review, params: {}, session: valid_session }
-
-    let!(:card) { create(:card) }
+  describe 'GET #index' do
+    subject(:get_index) { get :index, params: {}, session: valid_session }
 
     it 'returns a success response' do
-      get_review
+      get_index
       expect(response).to be_successful
     end
 
-    it 'assigns an array of cards to `@queue`' do
-      get_review
-      expect(assigns(:queue)).to include(card)
+    it 'renders the index template' do
+      get_index
+      expect(response).to render_template(:index)
     end
+  end
 
-    it 'renders the review template' do
-      get_review
-      expect(response).to render_template(:review)
+  describe 'GET #queue' do
+    subject(:get_queue) { get :queue, format: :json, params: {}, session: valid_session }
+
+    let!(:card) { create(:card) }
+
+    it 'assigns an array of cards to `@queue`' do
+      get_queue
+      expect(assigns(:queue)).to include(card)
     end
   end
 end

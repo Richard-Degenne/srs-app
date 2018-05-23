@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ReviewController < ApplicationController
-  def review
+  def queue
     @queue = Card.all
   end
 end
