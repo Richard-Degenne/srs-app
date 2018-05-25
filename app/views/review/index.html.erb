@@ -1,1 +1,15 @@
 <h1>Review</h1>
+
+<div id="review">
+  <div id="question"></div>
+  <form action="/progress" method="post" data-remote="true">
+    <input type="hidden" name="question[id]" id="question-id" />
+    <input type="text" name="answer" id="answer" />
+    <input type="submit" value="Check" />
+</div>
+
+<script>
+  $(document).ready(function() {
+    var review = new Review($('#review'));
+  });
+</script>
